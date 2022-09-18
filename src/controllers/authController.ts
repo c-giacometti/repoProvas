@@ -10,7 +10,7 @@ export async function login(req: Request, res: Response){
 
     if(validRequest.error){
         throw {
-            type: "error_bad_request",
+            type: "error_unprocessable_entity",
             message: "incorrect data format"
         }
     }
@@ -27,14 +27,14 @@ export async function register(req: Request, res: Response){
 
     if(validRequest.error){
         throw {
-            type: "error_bad_request",
+            type: "error_unprocessable_entity",
             message: "incorrect data format"
         }
     }
 
     if(password !== confirmPassword){
         throw {
-            type: "error_bad_request",
+            type: "error_unprocessable_entity",
             message: "incorrect data"
         }
     }

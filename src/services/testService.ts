@@ -31,3 +31,21 @@ export async function addNewTest(testData: ITestResquest){
     await testRepository.insertTest(newTestData);
 
 }
+
+export async function getTests(sortBy: string){
+
+    if(sortBy === "discipline"){
+        const tests = await testRepository.testsGroupedByDiscipline();
+        return tests;
+    }
+
+    if(sortBy === "teacher"){
+        const tests = await testRepository.testsGroupedByTeacher();
+        return tests;
+    }
+
+    throw {
+        type: "error_bad_request",
+        message: "couldn't sort by this selection"
+    }
+}

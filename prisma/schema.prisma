@@ -23,12 +23,16 @@ model Category {
   name  String  @unique
   tests Test[]
 
+  disciplines Discipline[]
+  teachers Teacher[]
+
   @@map("categories")
 }
 
 model Term {
   id     Int  @id @default(autoincrement())
   number Int  @unique
+  disciplines Discipline[]
 
   @@map("terms")
 }
@@ -37,7 +41,11 @@ model Discipline {
   id     Int      @id @default(autoincrement())
   name   String   @unique
   termId Int
+  term   Term @relation(fields: [termId], references: [id], onDelete: Cascade, onUpdate: NoAction)
   teachersDisciplines teacherDiscipline[]
+
+  categories Category[]
+  teachers Teacher[]
 
   @@map("disciplines")
 }
@@ -46,6 +54,9 @@ model Teacher {
   id   Int      @id @default(autoincrement())
   name String   @unique
   teachersDisciplines teacherDiscipline[]
+
+  disciplines Discipline[]
+  categories Category[]
 
   @@map("teachers")
 }

@@ -9,13 +9,3 @@ export async function findCategoryById(id: number){
     return result;
 
 }
-
-export async function findCategoryByName(name: string){
-
-    const result = await connection.category.findUnique({
-        where: { name }
-    });
-
-    return result;
-
-}
