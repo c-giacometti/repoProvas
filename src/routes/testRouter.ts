@@ -5,6 +5,6 @@ import * as testController from "../controllers/testController.js";
 
 const router = Router();
 
-router.post("/addtest", testController.postTest);
+router.post("/addtest", validateToken, testController.postTest);
 
 export default router;
