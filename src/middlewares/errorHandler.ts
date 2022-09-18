@@ -1,11 +1,11 @@
 import { Request, Response, NextFunction } from "express";
 
-type errorType = {
+type ErrorType = {
     type: string,
     message: string
 }
 
-export default function errorHandler(error: errorType, _req: Request, res: Response, _next: NextFunction){
+export default function errorHandler(error: ErrorType, _req: Request, res: Response, _next: NextFunction){
     
     if(error.type === "error_bad_request"){
         return res.status(400).send(error.message);
