@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 
-import * as testService from "../services/testService.js";
-import { testSchema } from "../schemas/testSchema.js";
+import * as testService from "../services/testService";
+import { testSchema } from "../schemas/testSchema";
 
 export async function postTest(req: Request, res: Response){
 

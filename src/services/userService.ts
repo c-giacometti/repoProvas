@@ -1,6 +1,6 @@
 import jwt from 'jsonwebtoken';
-import * as userRepository from "../repositories/userRepository.js";
-import { encryptPasswords, decryptPasswords } from '../utils/encryptUtil.js';
+import * as userRepository from "../repositories/userRepository";
+import { encryptPasswords, decryptPasswords } from '../utils/encryptUtil';
 
 export async function newUser(
     email: string, 

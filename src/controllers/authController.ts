@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 
-import * as authSchema from "../schemas/authSchema.js";
-import * as userService from "../services/userService.js";
+import * as authSchema from "../schemas/authSchema";
+import * as userService from "../services/userService";
 
 export async function login(req: Request, res: Response){
     const { email, password } = req.body;

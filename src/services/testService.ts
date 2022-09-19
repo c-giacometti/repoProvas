@@ -1,8 +1,8 @@
-import * as testRepository from "../repositories/testRepository.js";
-import { verifyIfCategoryExists } from "./categoryService.js";
-import { verifyIfDisciplineExists } from "./disciplineService.js";
-import { verifyIfTeacherTeachsDiscipline } from "./teacherDisciplineService.js";
-import { verifyIfTeacherExists } from "./teacherService.js";
+import * as testRepository from "../repositories/testRepository";
+import { verifyIfCategoryExists } from "./categoryService";
+import { verifyIfDisciplineExists } from "./disciplineService";
+import { verifyIfTeacherTeachsDiscipline } from "./teacherDisciplineService";
+import { verifyIfTeacherExists } from "./teacherService";
 
 export type ITestResquest = {
     name: string,

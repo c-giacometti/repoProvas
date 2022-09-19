@@ -1,4 +1,4 @@
-import connection from "../src/config/prisma.js";
+import connection from "../src/config/prisma";
 
 async function main() {
     await connection.$executeRaw`TRUNCATE TABLE users RESTART IDENTITY CASCADE`;

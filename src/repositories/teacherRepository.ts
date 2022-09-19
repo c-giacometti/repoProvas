@@ -1,4 +1,4 @@
-import connection from "../config/prisma.js";
+import connection from "../config/prisma";
 
 export async function findTeacherById(id: number){
 

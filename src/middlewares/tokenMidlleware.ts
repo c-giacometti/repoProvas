@@ -1,6 +1,6 @@
 import jwt from 'jsonwebtoken';
 import { Request, Response, NextFunction } from 'express';
-import * as userService from "../services/userService.js";
+import * as userService from "../services/userService";
 
 interface IToken {
     id: number;

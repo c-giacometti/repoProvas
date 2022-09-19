@@ -1,4 +1,4 @@
-import * as teacherDisciplineRepository from "../repositories/teacherDisciplineRepository.js";
+import * as teacherDisciplineRepository from "../repositories/teacherDisciplineRepository";
 
 export async function verifyIfTeacherTeachsDiscipline(teacherId: number, disciplineId: number){
 

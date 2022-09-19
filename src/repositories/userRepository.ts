@@ -1,5 +1,5 @@
 import { User } from "@prisma/client";
-import connection from "../config/prisma.js";
+import connection from "../config/prisma";
 
 export type IUserData = Omit<User, "id">
 

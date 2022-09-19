@@ -1,4 +1,4 @@
-import * as disciplineRepository from "../repositories/disciplineRepository.js";
+import * as disciplineRepository from "../repositories/disciplineRepository";
 
 export async function verifyIfDisciplineExists(disciplineId: number){
 

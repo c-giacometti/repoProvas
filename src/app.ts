@@ -3,9 +3,9 @@ import express from "express";
 import dotenv from "dotenv";
 import "express-async-errors";
 
-import authRouter from "./routes/authRouter.js";
-import testRouter from "./routes/testRouter.js";
-import errorHandler from "./middlewares/errorHandler.js";
+import authRouter from "./routes/authRouter";
+import testRouter from "./routes/testRouter";
+import errorHandler from "./middlewares/errorHandler";
 
 dotenv.config();
 

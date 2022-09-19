@@ -1,7 +1,7 @@
 import { Router } from "express";
 
-import validateToken from "../middlewares/tokenMidlleware.js";
-import * as testController from "../controllers/testController.js";
+import validateToken from "../middlewares/tokenMidlleware";
+import * as testController from "../controllers/testController";
 
 const router = Router();
 
